@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {addTodo} from '../features/todo/todoSlice' 
 
@@ -9,7 +9,7 @@ function AddTodo() {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-        dispatch(addTodo(input))
+        dispatch(addTodo(input))    //>>>> dispach uses reducer to change in store
         setInput('')
     }
 
